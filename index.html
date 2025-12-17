@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vikas Biradar | Social Media Manager and Digital Marketing strategist </title>
+  <meta name="description" content="Vikas Biradar - Social Media Manager | Digital Marketing | Content & Performance" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+    :root{
+      --bg:#f0f2f5;
+      --card:#ffffff;
+      --muted:#3b3b3b;
+      --meta-blue:#1877f2;
+      --google-red:#ea4335;
+      --google-green:#34a853;
+      --google-yellow:#fbbc05;
+      --accent:#0a66c2; /* LinkedIn-ish blue for CTAs */
+      --max-width:1200px;
+      --radius:14px;
+      --gap:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Poppins,system-ui,Segoe UI,Arial;color:#222;background:var(--bg);}
+    html {
+      scroll-behavior: smooth;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max-width);margin:28px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid rgba(0,0,0,0.06)}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
+    .cta{background:linear-gradient(90deg,var(--accent),#4c6ef5);padding:10px 14px;border-radius:10px;color:white;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(10,102,194,0.12)}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center;margin-top:28px}
+    .hero-card{background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:0 6px 24px rgba(0,0,0,0.06)}
+    .hero h1{margin:0;font-size:30px;color:#111}
+    .hero p.lead{color:#555;margin-top:12px;line-height:1.5}
+    .actions{margin-top:18px;display:flex;gap:12px}
+    .btn-outline{padding:10px 14px;border-radius:10px;border:1px solid #e6e6e6;background:transparent;color:#111;text-decoration:none;font-weight:600}
+    .icons-row{display:flex;gap:18px;margin-top:16px;flex-wrap:wrap;align-items:center}
+    .icons-row i{font-size:26px}
+    .stats{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .stat{background:#fafafa;padding:12px;border-radius:10px;text-align:center;min-width:110px;box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+    .stat h3{margin:0;color:#111}
+    .stat p{margin:4px 0 0;color:#666;font-size:13px}
+    .hero-media{display:flex;gap:12px;flex-direction:column;align-items:center}
+    .profile-photo{width:100%;border-radius:12px;overflow:hidden;background:#fff;padding:6px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .profile-photo img{width:100%;display:block;border-radius:10px}
+    section{margin-top:32px}
+    h2.section-title{color:#111;margin:0 0 8px;font-size:22px}
+    p.section-sub{color:#555;margin:0 0 18px}
+    .experience{display:grid;grid-template-columns:1fr;gap:12px}
+    .exp-card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    .exp-meta{display:flex;align-items:center;gap:12px}
+    .exp-meta img{width:52px;height:52px;border-radius:8px;object-fit:cover}
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .skill-card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    .bars{display:flex;gap:8px;flex-direction:column}
+    .bar{height:10px;background:#f0f0f0;border-radius:999px;overflow:hidden}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--meta-blue),#4c6ef5)}
+    .case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .case{background:linear-gradient(180deg, #fff, #fcfcfc);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    .pill{display:inline-block;padding:6px 10px;background:#fafafa;border-radius:999px;color:var(--muted);font-size:13px;border:1px solid #f0f0f0}
+    /* carousel */
+    .carousel-wrap{position:relative;margin-top:8px}
+    .carousel{overflow:hidden}
+    .carousel-viewport{overflow-x:auto;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding-bottom:10px}
+    .carousel-viewport::-webkit-scrollbar{display:none}
+    .carousel-track{display:flex;gap:var(--gap);align-items:flex-start;padding:6px}
+    .carousel-item{flex:0 0 calc((100% - (var(--gap) * 3))/4);background:#fff;padding:10px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    .embed-9x16{width:100%;aspect-ratio:9/16;background:#000;border-radius:8px;overflow:hidden}
+    .embed-9x16 iframe{width:100%;height:100%;border:0;display:block}
+    .embed-16x9{width:100%;aspect-ratio:16/9;background:#000;border-radius:8px;overflow:hidden}
+    .embed-16x9 iframe{width:100%;height:100%;border:0;display:block}
+    .carousel-controls{position:absolute;top:50%;left:0;right:0;transform:translateY(-50%);display:flex;justify-content:space-between;padding:0 6px;pointer-events:none}
+    .carousel-btn{pointer-events:all;background:rgba(0,0,0,0.6);border:none;color:white;padding:8px 10px;border-radius:10px;margin:0 6px;cursor:pointer}
+    .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .test{background:#fff;padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    .certs{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .contact-wrap{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    .contact-form{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #ececec;background:transparent;color:#222}
+    .submit{background:linear-gradient(90deg,var(--accent),#4c6ef5);padding:10px 14px;border-radius:10px;border:none;color:white;font-weight:700;cursor:pointer}
+    footer{margin-top:36px;padding:14px;color:#555;text-align:center;font-size:14px}
+    @media (max-width:1100px){ .hero{grid-template-columns:1fr 340px} .case-grid{grid-template-columns:1fr} .carousel-item{flex:0 0 calc((100% - (var(--gap) * 2))/3)} }
+    @media (max-width:780px){ .hero{grid-template-columns:1fr} nav{display:none} .wrap{padding:16px} .carousel-item{flex:0 0 calc((100% - var(--gap))/2)} .skills-grid{grid-template-columns:1fr} .test-grid{grid-template-columns:1fr} }
+    @media (max-width:420px){ .carousel-item{flex:0 0 100%} .carousel-controls{display:none} }
+
+
+/* ===== Certificates gallery ===== */
+.section-certs { padding: 26px 12px; }
+.section-certs .section-title { margin: 0 0 6px 0; font-size: 22px; }
+.section-certs .section-sub { margin: 0 0 16px 0; color: var(--muted); }
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Card */
+.cert-card {
+  display: flex;
+  background: var(--card, #fff);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(20,20,30,0.06);
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+  min-height: 120px;
+}
+.cert-card:focus, .cert-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(20,20,30,0.08); outline: none; }
+
+/* Left half - certificate image */
+.cert-thumb {
+  flex: 0 0 50%;
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.cert-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-right: 1px solid #f0f0f0;
+}
+
+/* Right half - content */
+.cert-info {
+  flex: 1;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cert-title { font-weight: 700; font-size: 17px; color: #111; margin-bottom: 6px; }
+.cert-meta { display:flex; align-items:center; gap:8px; color: var(--muted, #6b6b73); font-size: 13px; margin-bottom: 10px; }
+.issuer-logo { width: 22px; height: 22px; object-fit: contain; border-radius:4px; display:inline-block; }
+.cert-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+.tag { background:#f7f9fb; border:1px solid #eef3f8; padding:6px 10px; border-radius:999px; font-size:12px; color: #51606a; }
+
+.cert-actions { display:flex; gap:10px; margin-top:auto; }
+.btn-link { background:transparent; border:none; color:var(--accent,#0a66c2); font-weight:700; cursor:pointer; padding:6px 10px; border-radius:6px; }
+.btn-outline.small { padding:6px 10px; border-radius:6px; border:1px solid #e6e9ec; background:transparent; text-decoration:none; color:var(--muted,#6b6b73); }
+
+/* Modal */
+.cert-modal { display:none; position:fixed; inset:0; z-index:2200; align-items:center; justify-content:center; }
+.cert-modal[aria-hidden="false"] { display:flex; }
+.cert-modal-backdrop { position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+.cert-modal-panel { position:relative; background:var(--card,#fff); border-radius:12px; padding:18px; max-width:980px; width:94%; box-shadow:0 30px 50px rgba(0,0,0,0.18); z-index:2; }
+.modal-body { display:flex; gap:18px; }
+.modal-image { flex:0 0 48%; max-width:48%; }
+.modal-image img { width:100%; height:auto; border-radius:8px; display:block; }
+.modal-right { flex:1; display:flex; flex-direction:column; }
+.modal-title { margin:0; font-size:20px; }
+.modal-meta { color:var(--muted,#6b6b73); font-size:14px; margin-top:6px; display:flex; gap:8px; align-items:center; }
+.modal-desc { color:#444; margin-top:12px; line-height:1.45; }
+.modal-tags { margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; }
+.modal-cred { margin-top:12px; color:var(--muted,#6b6b73); font-size:13px; }
+.modal-close { position:absolute; right:12px; top:8px; background:transparent; border:none; font-size:18px; cursor:pointer; color:var(--muted,#6b6b73); }
+
+/* Responsive */
+@media (max-width: 900px){
+  .certs-grid { grid-template-columns: 1fr; }
+  .cert-thumb { max-width: 40%; flex-basis:40%; }
+  .modal-body { flex-direction:column; }
+  .modal-image { max-width:100%; }
+  .modal-image img { max-height:420px; object-fit:contain; }
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <header>
+      <div class="brand">
+        <img src="https://i.ibb.co/jPktfgXs/Vikas-a-b.png" alt="Vikas Logo">
+        <div>
+          <div style="font-weight:700;color:#111">Vikas Biradar</div>
+          <div style="font-size:12px;color:#555">Social Media Manager & Digital Marketing strategist</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#cases">Case Studies</a>
+        <a href="#reels">Reels</a>
+        <a href="#videos">Videos</a>
+          <div class="dropdown" style="position:relative;display:inline-block;">
+            <a href="#" class="cta" id="resumeDropdownBtn" style="cursor:pointer;">My Resume</a>
+            <div id="resumeDropdownMenu" style="display:none;position:absolute;right:0;background:#fff;min-width:180px;box-shadow:0 6px 18px rgba(0,0,0,0.10);border-radius:10px;z-index:1000;">
+              <a href="https://drive.google.com/file/d/1lE1UXcGGZBdUXg0uY2qYicg5BfFQWj1x/view?usp=sharing" target="_blank" style="display:block;padding:10px 16px;color:#222;text-decoration:none;border-bottom:1px solid #f0f0f0;border-radius:10px 10px 0 0;">View Resume</a>
+              <a href="https://drive.usercontent.google.com/u/0/uc?id=1lE1UXcGGZBdUXg0uY2qYicg5BfFQWj1x&export=download" download style="display:block;padding:10px 16px;color:#222;text-decoration:none;border-radius:0 0 10px 10px;">Download Resume</a>
+            </div>
+          </div>
+      </nav>
+    <script>
+      // Dropdown logic for Resume
+      document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('resumeDropdownBtn');
+        var menu = document.getElementById('resumeDropdownMenu');
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        });
+        // Hide dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.style.display = 'none';
+          }
+        });
+
+        // Smooth scroll for header nav links
+        document.querySelectorAll('nav a[href^="#"]').forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            var targetId = this.getAttribute('href').slice(1);
+            var target = document.getElementById(targetId);
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: 'smooth' });
+            }
+          });
+        });
+      });
+    </script>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-card">
+        <h1>Hi, I'm Vikas Biradar</h1>
+        <p class="lead">Performance-driven Social Media Manager combining creative storytelling with ad-performance expertise. B.Tech (IT) and 5+ years crafting content that scales across platforms and funnels.</p>
+
+        <div class="actions">
+          <a href="#reels" class="btn-outline">Review My Work</a>
+          <a href="#contact" class="cta">Hire Me</a>
+        </div>
+
+        <div class="icons-row" aria-hidden="true">
+          <!-- social / marketing icons to signal expertise -->
+          <i class="fa-brands fa-facebook" style="color:var(--meta-blue)"></i>
+          <i class="fa-brands fa-instagram" style="color:#e1306c"></i>
+          <i class="fa-brands fa-youtube" style="color:#ff0000"></i>
+          <i class="fa-brands fa-google" style="color:var(--google-red)"></i>
+          <i class="fa-brands fa-linkedin" style="color:#0a66c2"></i>
+          <i class="fa-solid fa-chart-line" style="color:var(--google-green)"></i>
+          <i class="fa-solid fa-bullhorn" style="color:var(--google-yellow)"></i>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><h3>1000+</h3><p>Videos Created</p></div>
+          <div class="stat"><h3>5+</h3><p>Years Experience</p></div>
+          <div class="stat"><h3>10M+</h3><p>Organic Reach</p></div>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="profile-photo" style="width:100%;max-width:380px">
+          <img src="https://i.ibb.co/jPktfgXs/Vikas-a-b.png" alt="Vikas profile">
+        </div>
+        <div style="width:100%;max-width:380px;background:#fff;padding:14px;border-radius:12px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,0.04)">
+          <div style="font-weight:700;color:#111">Vikas Biradar</div>
+          <div style="color:#555;font-size:13px;margin-top:8px">Social Media Manager & Digital Marketing strategist</div>
+          <div style="margin-top:10px"><a href="https://www.linkedin.com/in/vikasab101/" target="_blank" style="color:var(--muted)">linkedin.com/in/vikasab101</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT ME -->
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-sub">I am a Social Media Manager with a passion for blending creativity and performance. With over 5 years of experience, I specialize in managing end-to-end digital campaigns, producing and editing high-impact video content, and building strategies that align with business objectives. My background in IT gives me an analytical edge — I combine data-driven ad optimization with storytelling-led creative to drive growth. I’ve created more than 1000 pieces of video content, achieved large organic reach on short-form platforms, and executed full-funnel paid campaigns. My goal is to contribute to an established marketing team in an MNC and grow into a leadership role.</p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+      <p class="section-sub">Roles I’ve held and achievements.</p>
+
+      <div class="experience" style="margin-top:12px">
+        <div class="exp-card">
+          <div class="exp-meta">
+            <img src="https://i.ibb.co/HfqxLbZx/Life-Force-Logo.jpg" alt="Life-Force-Logo" border="0">
+            <div>
+              <div style="font-weight:700;color:#111">Social Media Manager</div>
+              <div style="color:var(--muted);font-size:13px">Life Force Homeopathy • Apr 2025 - Present (On-site)</div>
+            </div>
+          </div>
+          <p style="color:#555;margin-top:10px">Develop and execute social media strategies aligned with business goals. Produce & manage short-form + long-form video content, run performance campaigns on Meta & Google, optimize funnels to reduce CPL, and collaborate with cross-functional teams to scale patient acquisition and brand storytelling.</p>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-meta">
+            <img src="https://i.ibb.co/HfqxLbZx/Life-Force-Logo.jpg" alt="Life-Force-Logo" border="0">
+            <div>
+              <div style="font-weight:700;color:#111">Social Media Executive</div>
+              <div style="color:var(--muted);font-size:13px">Sep 2023 - Apr 2025 • Mumbai, Maharashtra</div>
+            </div>
+          </div>
+          <p style="color:#555;margin-top:10px">Handled content creation, video editing, paid promotions, brand awareness campaigns and local lead generation. Tools used: Meta Ads Manager, Google Ads, YouTube Studio, and analytics platforms.</p>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-meta">
+            <img src="https://i.ibb.co/zHtFDVqp/Mohalla-tech-logo.jpg" alt="Mohalla-tech-logo" border="0">
+            <div>
+              <div style="font-weight:700;color:#111">Mohalla Tech / Moj Creator (Freelance)</div>
+              <div style="color:var(--muted);font-size:13px">Nov 2021 - Nov 2022 (Remote)</div>
+            </div>
+          </div>
+          <p style="color:#555;margin-top:10px">Created 250+ short-form videos, grew followers from 0 to 25K, achieved 10M+ organic reach and ranked in the top 1% creators. Focused on bite-sized storytelling and platform-first optimization.</p>
+        </div>
+
+         <div class="exp-card">
+          <div class="exp-meta">
+            <img src="https://i.ibb.co/TDbqwXfb/You-Tube-logo.jpg" alt="You-Tube-logo" border="0">
+            <div>
+              <div style="font-weight:700;color:#111">Tech Creator</div>
+              <div style="color:var(--muted);font-size:13px">Nov 2021 - Nov 2022 (Remote)</div>
+            </div>
+          </div>
+          <p style="color:#555;margin-top:10px">Created 300+ videos focused on smartphones,
+upcoming technology, and social media updates for
+a tech-focused YouTube channel.
+Reached over 1 million viewers organically through
+original, SEO-optimized content without paid
+promotions.
+Achieved eligibility for the YouTube Partner Program
+within just 6 months through consistent content
+creation and audience engagement</p>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- SKILLS & EXPERTISE -->
+    <section id="skills">
+      <h2 class="section-title">Skills & Expertise</h2>
+      <p class="section-sub">Creative + Performance competencies for enterprise marketing.</p>
+
+      <div class="skills-grid" style="margin-top:12px">
+        <div class="skill-card">
+          <h4>Creative Skills</h4>
+          <div class="bars">
+            <div>Content Creation</div>
+            <div class="bar"><i style="width:92%"></i></div>
+            <div>Social Media Managment and SEO</div>
+            <div class="bar"><i style="width:90%"></i></div>
+            <div>Graphic Designing</div>
+            <div class="bar"><i style="width:84%"></i></div>
+            <div>Video Editing</div>
+            <div class="bar"><i style="width:84%"></i></div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Performance Skills</h4>
+          <div class="bars">
+            <div>Meta Ads & Creative Optimization</div>
+            <div class="bar"><i style="width:88%"></i></div>
+            <div>Google Ads & Landing Pages</div>
+            <div class="bar"><i style="width:76%"></i></div>
+            <div>Analytics & Reporting</div>
+            <div class="bar"><i style="width:82%"></i></div>
+            <div>AI Prompt Engineering</div>
+            <div class="bar"><i style="width:82%"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+        <div class="pill"><i class="fa-brands fa-facebook" style="color:var(--meta-blue)"></i> Meta Ads</div>
+        <div class="pill"><i class="fa-brands fa-google" style="color:var(--google-red)"></i> Google Ads</div>
+        <div class="pill"><i class="fa-brands fa-youtube" style="color:#ff0000"></i> YouTube</div>
+        <div class="pill"><i class="fa-solid fa-chart-line" style="color:var(--google-green)"></i> Analytics</div>
+        <div class="pill"><i class="fa-brands fa-instagram" style="color:#e1306c"></i> Instagram</div>
+        <div class="pill"><i class="fa-brands fa-linkedin" style="color:#0a66c2"></i> LinkedIn</div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section id="cases">
+      <h2 class="section-title">Case Studies</h2>
+      <p class="section-sub">Selected projects in problem → strategy → execution → results format.</p>
+
+      <div class="case-grid" style="margin-top:12px">
+        <article class="case">
+          <div style="font-weight:700;color:#111">Life Force Homeopathy — Lead Gen & Storytelling</div>
+          <p style="margin-top:8px;color:#555">Problem: Low qualified leads for chronic conditions. Strategy: Patient storytelling series + targeted Meta campaigns + optimized landing funnels. Execution: Produced 1000+ short edits and long-form patient narratives. <strong>Results: 40% uplift in qualified leads & 30% reduction in CPL.</strong></p>
+        </article>
+
+        <article class="case">
+          <div style="font-weight:700;color:#111">Cafe Footfall Campaign — Local Growth</div>
+          <p style="margin-top:8px;color:#555">Problem: Low in-store visits. Strategy: Geo-targeted ads, UGC-style reels, influencer micro-collabs. Execution: Offer-driven creatives & optimized ad sets. <strong>Results: 3x month-on-month footfall during campaign.</strong></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- MY EDITED REELS (9:16 scroller) -->
+    <section id="reels">
+      <h2 class="section-title">My Edited Reels</h2>
+      <p class="section-sub">Short-form edits optimized for engagement and shareability. Use arrows to scroll; shows 4 items on desktop.</p>
+
+      <div class="carousel-wrap">
+        <div class="carousel">
+          <div class="carousel-viewport" id="reelsCarousel" aria-label="Reels carousel">
+            <div class="carousel-track">
+              <div class="carousel-item">
+                <div class="embed-9x16"><iframe src="https://www.youtube.com/embed/hiMq99tobww" title="Short 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Short · Homeopathy</div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="embed-9x16"><iframe src="https://www.youtube.com/embed/KigSxnEwf5c" title="Short 2" allowfullscreen></iframe></div>
+                <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Short · Campaign</div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="embed-9x16"><iframe src="https://www.youtube.com/embed/gUkf5cKutDg" title="Short 3" allowfullscreen></iframe></div>
+                <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Short · Teaser</div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="embed-9x16"><iframe src="https://www.youtube.com/embed/jyM_5OCt-6E" title="Short 4" allowfullscreen></iframe></div>
+                <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Short · Engagement</div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="embed-9x16"><iframe src="https://www.youtube.com/embed/459RI2bh2Lw" title="Short 5" allowfullscreen></iframe></div>
+                <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Short · Awareness</div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="embed-9x16"><iframe src="https://www.youtube.com/embed/WUxcpE9eNjg" title="Short 6" allowfullscreen></iframe></div>
+                <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Short · Offer Teaser</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-controls" aria-hidden="true">
+          <button class="carousel-btn" data-target="reelsCarousel" data-dir="prev">◀</button>
+          <button class="carousel-btn" data-target="reelsCarousel" data-dir="next">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL-LENGTH VIDEOS (16:9 scroller) -->
+    <section id="videos">
+      <h2 class="section-title">Full-Length Videos & Case Studies</h2>
+      <p class="section-sub">Long-form narratives and campaign videos used for brand storytelling and conversions.</p>
+
+      <div class="carousel-wrap">
+        <div class="carousel">
+          <div class="carousel-viewport" id="videosCarousel" aria-label="Videos carousel">
+            <div class="carousel-track">
+              <div class="carousel-item">
+                <div class="embed-16x9"><iframe src="https://www.youtube.com/embed/AC131D_tbGk" title="Video 1" allowfullscreen></iframe></div>
+                <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Campaign Story — 8 min</div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="embed-16x9"><iframe src="https://www.youtube.com/embed/icvDbYyIWhc" title="Video 2" allowfullscreen></iframe></div>
+                <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Case Study — 6 min</div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="embed-16x9"><iframe src="https://www.youtube.com/embed/pxKKlIlM9Rg" title="Video 3" allowfullscreen></iframe></div>
+                <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Campaign Breakdown</div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="embed-16x9"><iframe src="https://www.youtube.com/embed/MNn-kGADmt0" title="Video 4" allowfullscreen></iframe></div>
+                <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Patient Story</div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="embed-16x9"><iframe src="https://www.youtube.com/embed/sgbmMvFHK5s" title="Video 5" allowfullscreen></iframe></div>
+                <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Campaign</div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="embed-16x9"><iframe src="https://www.youtube.com/embed/RsRcuL-A_w4" title="Video 6" allowfullscreen></iframe></div>
+                <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Campaign</div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="embed-16x9"><iframe src="https://www.youtube.com/embed/kxRICZdBiPg" title="Video 7" allowfullscreen></iframe></div>
+                <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Campaign</div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="embed-16x9"><iframe src="https://www.youtube.com/embed/E9gYqGnLaas" title="Video 8" allowfullscreen></iframe></div>
+                <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Campaign</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-controls" aria-hidden="true">
+          <button class="carousel-btn" data-target="videosCarousel" data-dir="prev">◀</button>
+          <button class="carousel-btn" data-target="videosCarousel" data-dir="next">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+      <h2 class="section-title">Testimonials</h2>
+      <p class="section-sub">Feedback from stakeholders and campaign owners.</p>
+
+      <div class="test-grid" style="margin-top:12px">
+        <div class="test">
+          <div style="font-weight:700;color:#111">Dr Rajesh Shah, Life Force</div>
+          <p style="color:#555">"Vikas brings structured creativity and delivers measurable results. He played a key role in our storytelling-led campaigns."</p>
+        </div>
+
+        <div class="test">
+          <div style="font-weight:700;color:#111">Cafe Owner</div>
+          <p style="color:#555">"Effective local targeting and creatives — drove customers during slow weekdays."</p>
+        </div>
+
+        <div class="test">
+          <div style="font-weight:700;color:#111">Product Head, Jaano AI</div>
+          <p style="color:#555">"Clear briefs, timely execution and great insight into user behaviour."</p>
+        </div>
+      </div>
+    </section>
+
+    
+<!-- LICENSES & CERTIFICATIONS -->
+<section id="certs" aria-labelledby="certs-title" class="section-certs">
+  <div class="container">
+    <h2 id="certs-title" class="section-title">Licenses & Certifications</h2>
+    <p class="section-sub">Visual gallery of my certificates — click any card to view a larger image and verify credentials.</p>
+
+    <div class="certs-grid" aria-live="polite">
+      <!-- LinkedIn -->
+      <article class="cert-card" tabindex="0" role="button" aria-pressed="false" data-cert='{
+        "title":"Understanding Viral Videos",
+        "issuer":"LinkedIn",
+        "date":"Jul 2025",
+        "desc":"Short course on making videos that go viral: format, hooks, and distribution tactics.",
+        "skills":["Viral Video","YouTube"],
+        "img":"https://i.ibb.co/jpCTGPw/Understanding-Viral-Videos-certificate.jpg",
+        "issuerLogo":"https://i.ibb.co/N5FnXqj/linkedin-logo.jpg",
+        "verify":"https://www.linkedin.com/learning/certificates/26e0bc323742d9196ee07785645976945520e6ec2e8ca5e0c321a6d0c5ef8021",
+        "id":""
+      }'>
+        <div class="cert-thumb">
+          <img src="https://i.ibb.co/jpCTGPw/Understanding-Viral-Videos-certificate.jpg" alt="Understanding Viral Videos certificate">
+        </div>
+        <div class="cert-info">
+          <div class="cert-title">Understanding Viral Videos</div>
+          <div class="cert-meta">
+            <img src="https://i.ibb.co/N5FnXqj/linkedin-logo.jpg" class="issuer-logo" alt="LinkedIn logo">
+            <span class="issuer">LinkedIn</span> · <span class="issued">Issued Jul 2025</span>
+          </div>
+          <div class="cert-tags">
+            <span class="tag">Viral Video</span>
+            <span class="tag">YouTube</span>
+          </div>
+          <div class="cert-actions">
+            <button class="btn-link view-btn" type="button">View</button>
+            <a class="btn-outline small" href="https://www.linkedin.com/learning/certificates/26e0bc323742d9196ee07785645976945520e6ec2e8ca5e0c321a6d0c5ef8021" target="_blank" rel="noopener">Verify</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- LearnTube.ai -->
+<article class="cert-card" tabindex="0" role="button" aria-pressed="false" data-cert='{
+  "title":"Social Media Marketing Assessment",
+  "issuer":"LearnTube.ai",
+  "date":"Dec 2024",
+  "desc":"Assessment covering social media strategy, content creation and meta ads.",
+  "skills":["Social Media Marketing","Creative Content","Meta Ads","SMO"],
+  "img":"https://i.ibb.co/wN5gftCK/certificate-Vikas-Biradar-learntube.png",
+  "issuerLogo":"https://i.ibb.co/vCL8ZHLt/Learntube-logo.jpg",
+  "verify":"https://learntube.ai/verify/certificate/DJA-B-1-738145-0",
+  "id":"DJA-B-1-738145-0"
+}'>
+  <div class="cert-thumb">
+    <img src="https://i.ibb.co/wN5gftCK/certificate-Vikas-Biradar-learntube.png" alt="LearnTube Social Media Marketing Assessment certificate">
+  </div>
+  <div class="cert-info">
+    <div class="cert-title">Social Media Marketing Assessment</div>
+    <div class="cert-meta">
+      <img src="https://i.ibb.co/vCL8ZHLt/Learntube-logo.jpg" class="issuer-logo" alt="LearnTube.ai logo">
+      <span class="issuer">LearnTube.ai</span> · <span class="issued">Dec 2024</span>
+    </div>
+    <div class="cert-tags">
+      <span class="tag">Social Media Marketing</span>
+      <span class="tag">Creative Content</span>
+      <span class="tag">Meta Ads</span>
+      <span class="tag">SMO</span>
+    </div>
+    <div class="cert-actions">
+      <button class="btn-link view-btn" type="button">View</button>
+      <a class="btn-outline small" href="https://learntube.ai/verify/certificate/DJA-B-1-738145-0" target="_blank" rel="noopener">Verify</a>
+    </div>
+  </div>
+</article>
+
+
+      <!-- Udemy -->
+<article class="cert-card" tabindex="0" role="button" aria-pressed="false" data-cert='{
+  "title":"Professional Certificate in SMM",
+  "issuer":"Udemy",
+  "date":"Oct 2024",
+  "desc":"Advanced certification focused on social media strategy, analytics, and campaign optimisation.",
+  "skills":["Facebook Marketing","Instagram","Facebook Ads Manager"],
+  "img":"https://i.ibb.co/4nc6gwmF/udemy-certificate-vikas.jpg",
+  "issuerLogo":"https://i.ibb.co/LDx6L8MP/udemy-logo.jpg",
+  "verify":"https://www.udemy.com/certificate/UC-16cfea55-b0af-40b4-a855-36f5049d1925/",
+  "id":"UC-16cfea55-b0af-40b4-a855-36f5049d1925"
+}'>
+  <div class="cert-thumb">
+    <img src="https://i.ibb.co/4nc6gwmF/udemy-certificate-vikas.jpg" alt="Udemy Professional Certificate in SMM">
+  </div>
+  <div class="cert-info">
+    <div class="cert-title">Professional Certificate in SMM</div>
+    <div class="cert-meta">
+      <img src="https://i.ibb.co/LDx6L8MP/udemy-logo.jpg" class="issuer-logo" alt="Udemy logo">
+      <span class="issuer">Udemy</span> · <span class="issued">Oct 2024</span>
+    </div>
+    <div class="cert-tags">
+      <span class="tag">Facebook Marketing</span>
+      <span class="tag">Instagram</span>
+      <span class="tag">Facebook Ads Manager</span>
+    </div>
+    <div class="cert-actions">
+      <button class="btn-link view-btn" type="button">View</button>
+      <a class="btn-outline small" href="https://www.udemy.com/certificate/UC-16cfea55-b0af-40b4-a855-36f5049d1925/" target="_blank" rel="noopener">Verify</a>
+    </div>
+  </div>
+</article>
+
+
+      <!-- Great Learning -->
+<article class="cert-card" tabindex="0" role="button" aria-pressed="false" data-cert='{
+  "title":"Facebook Business Manager",
+  "issuer":"Great Learning",
+  "date":"Oct 2023",
+  "desc":"Completed a course on Great Learning covering campaign setup, optimisation and Facebook Business Manager.",
+  "skills":["Facebook Marketing","Business Manager","Facebook Ads Manager","Campaign Optimisation"],
+  "img":"https://i.ibb.co/kVN1J1jq/Vikas-Angad-Biradar20230914-73-n6g3mu-great-learnig.jpg",
+  "issuerLogo":"https://i.ibb.co/wrzNdn4M/great-learning-logo.jpg",
+  "verify":"https://www.mygreatlearning.com/certificate/ILSQMXYR",
+  "id":"ILSQMXYR"
+}'>
+  <div class="cert-thumb">
+    <img src="https://i.ibb.co/kVN1J1jq/Vikas-Angad-Biradar20230914-73-n6g3mu-great-learnig.jpg" alt="Great Learning Facebook Business Manager certificate">
+  </div>
+  <div class="cert-info">
+    <div class="cert-title">Facebook Business Manager</div>
+    <div class="cert-meta">
+      <img src="https://i.ibb.co/wrzNdn4M/great-learning-logo.jpg" class="issuer-logo" alt="Great Learning logo">
+      <span class="issuer">Great Learning</span> · <span class="issued">Oct 2023</span>
+    </div>
+    <div class="cert-tags">
+      <span class="tag">Facebook Marketing</span>
+      <span class="tag">Business Manager</span>
+      <span class="tag">Facebook Ads Manager</span>
+      <span class="tag">Campaign Optimisation</span>
+    </div>
+    <div class="cert-actions">
+      <button class="btn-link view-btn" type="button">View</button>
+      <a class="btn-outline small" href="https://www.mygreatlearning.com/certificate/ILSQMXYR" target="_blank" rel="noopener">Verify</a>
+    </div>
+  </div>
+</article>
+
+  <!-- Modal for viewing certificate -->
+  <div id="certModal" class="cert-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="certModalTitle">
+    <div class="cert-modal-backdrop" data-close></div>
+    <div class="cert-modal-panel" role="document">
+      <button class="modal-close" aria-label="Close certificate" data-close>✕</button>
+      <div class="modal-body">
+        <div class="modal-image"><img src="" alt=""></div>
+        <div class="modal-right">
+          <h3 id="certModalTitle" class="modal-title"></h3>
+          <div class="modal-meta"></div>
+          <p class="modal-desc"></p>
+          <div class="modal-tags"></div>
+          <div class="modal-cred">Credential ID: <span class="cred-id"></span></div>
+          <div style="margin-top:12px">
+            <a class="cta modal-verify" href="#" target="_blank" rel="noopener">Open verification</a>
+            <button class="btn-outline" data-close style="margin-left:8px">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">Open to full-time opportunities. Available for interviews & assessments.</p>
+
+      <div class="contact-wrap">
+        <div class="contact-form">
+          <form onsubmit="handleSubmit(event)">
+            <div style="margin-bottom:10px"><input id="name" type="text" placeholder="Your name" required /></div>
+            <div style="margin-bottom:10px"><input id="email" type="email" placeholder="Email" required /></div>
+            <div style="margin-bottom:10px"><textarea id="message" rows="5" placeholder="Message e.g. role you are hiring for" required></textarea></div>
+            <div style="text-align:right"><button class="submit" type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+        <aside style="background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)">
+          <div style="font-weight:700;color:#111">Contact Details</div>
+          <div style="color:var(--muted);margin-top:8px">Mobile: <a href="75074 35549">75074 35549</a></div>
+          <div style="color:var(--muted);margin-top:8px">Email: <a href="mailto:vikas@example.com">vikas@example.com</a></div>
+          <div style="color:var(--muted);margin-top:6px">LinkedIn: <a href="https://www.linkedin.com/in/vikasab101/" target="_blank">linkedin.com/in/vikasab101</a></div>
+          <div style="color:var(--muted);margin-top:6px">Availability: Immediate</div>
+
+          <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+            <a href="#" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube" style="color:#ff0000;font-size:20px"></i></a>
+            <a href="#" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram" style="color:#e1306c;font-size:20px"></i></a>
+            <a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" style="color:#0a66c2;font-size:20px"></i></a>
+            <a href="#" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook" style="color:var(--meta-blue);font-size:20px"></i></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      © 2025 Vikas Biradar | Open to Social Media Manager & Digital Marketing roles
+    </footer>
+  </div>
+
+  <script>
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const subject = encodeURIComponent('Opportunity Inquiry from ' + name);
+      const body = encodeURIComponent(message + '\\n\\nContact: ' + email);
+      window.location.href = 'mailto:vikas@example.com?subject='+subject+'&body='+body;
+    }
+
+    function initCarousel(viewportId){
+      const viewport = document.getElementById(viewportId);
+      if(!viewport) return;
+      const track = viewport.querySelector('.carousel-track');
+      const btnPrev = document.querySelector('.carousel-btn[data-target="'+viewportId+'"][data-dir="prev"]');
+      const btnNext = document.querySelector('.carousel-btn[data-target="'+viewportId+'"][data-dir="next"]');
+
+      const getItemWidth = ()=> {
+        const item = track.querySelector('.carousel-item');
+        const gap = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--gap')) || 14;
+        return item ? Math.round(item.getBoundingClientRect().width + gap) : 320;
+      }
+
+      let itemWidth = getItemWidth();
+      window.addEventListener('resize', ()=>{ itemWidth = getItemWidth(); });
+
+      if(btnNext) btnNext.addEventListener('click', ()=>{ viewport.scrollBy({left: itemWidth, behavior:'smooth'}); });
+      if(btnPrev) btnPrev.addEventListener('click', ()=>{ viewport.scrollBy({left: -itemWidth, behavior:'smooth'}); });
+
+      // pointer drag
+      let isDown=false, startX=0, scrollLeft=0;
+      viewport.addEventListener('pointerdown', (e)=>{ isDown=true; viewport.setPointerCapture(e.pointerId); startX=e.clientX; scrollLeft=viewport.scrollLeft; });
+      viewport.addEventListener('pointerup', (e)=>{ isDown=false; viewport.releasePointerCapture(e.pointerId); });
+      viewport.addEventListener('pointermove', (e)=>{ if(!isDown) return; const dx = e.clientX - startX; viewport.scrollLeft = scrollLeft - dx; });
+    }
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+      initCarousel('reelsCarousel');
+      initCarousel('videosCarousel');
+    });
+
+// Certificates modal interactivity (cards + view button)
+(function(){
+  const cards = document.querySelectorAll('.cert-card');
+  const modal = document.getElementById('certModal');
+  const modalImage = modal.querySelector('.modal-image img');
+  const modalTitle = modal.querySelector('.modal-title');
+  const modalMeta = modal.querySelector('.modal-meta');
+  const modalDesc = modal.querySelector('.modal-desc');
+  const modalTags = modal.querySelector('.modal-tags');
+  const modalCred = modal.querySelector('.cred-id');
+  const modalVerify = modal.querySelector('.modal-verify');
+  const closeEls = modal.querySelectorAll('[data-close]');
+
+  function parseDataCert(raw){
+    try {
+      return JSON.parse(raw);
+    } catch(e) {
+      console.warn('Invalid data-cert JSON', e, raw);
+      return {};
+    }
+  }
+
+  function openModal(data){
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    modalImage.src = data.img || '';
+    modalImage.alt = (data.title || 'Certificate') + ' preview';
+    modalTitle.textContent = data.title || '';
+    // meta: issuer logo + issuer + date
+    modalMeta.innerHTML = '';
+    if(data.issuerLogo){
+      const img = document.createElement('img'); img.src = data.issuerLogo; img.className='issuer-logo'; img.alt = data.issuer || 'Issuer logo';
+      modalMeta.appendChild(img);
+    }
+    const metaText = document.createElement('span');
+    metaText.textContent = (data.issuer ? data.issuer + ' · ' : '') + (data.date || '');
+    modalMeta.appendChild(metaText);
+
+    modalDesc.textContent = data.desc || '';
+    modalTags.innerHTML = '';
+    (data.skills || []).forEach(s => {
+      const el = document.createElement('span'); el.className = 'tag'; el.textContent = s; modalTags.appendChild(el);
+    });
+    modalCred.textContent = data.id || '—';
+
+    // verify button
+    if(data.verify){
+      modalVerify.href = data.verify;
+      modalVerify.style.display = 'inline-block';
+    } else {
+      modalVerify.href = '#';
+      modalVerify.style.display = 'none';
+    }
+
+    // focus control
+    const closeBtn = modal.querySelector('.modal-close');
+    if(closeBtn) closeBtn.focus();
+  }
+
+  function closeModal(){
+    modal.setAttribute('aria-hidden','true');
+    modalImage.src = '';
+    document.body.style.overflow = '';
+  }
+
+  // card click & keyboard
+  cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      // if clicked verify anchor, let it navigate; if clicked view button, handle later
+      const raw = card.getAttribute('data-cert');
+      const data = parseDataCert(raw);
+      openModal(data);
+    });
+
+    card.addEventListener('keydown', (ev) => {
+      if(ev.key === 'Enter' || ev.key === ' '){
+        ev.preventDefault();
+        card.click();
+      }
+    });
+
+    // view button inside card
+    const viewBtn = card.querySelector('.view-btn');
+    if(viewBtn){
+      viewBtn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        const raw = card.getAttribute('data-cert');
+        openModal(parseDataCert(raw));
+      });
+      // prevent card double-activation via keyboard when focus on button
+      viewBtn.addEventListener('keydown', (ev) => ev.stopPropagation());
+    }
+  });
+
+  // close elements
+  closeEls.forEach(el => el.addEventListener('click', closeModal));
+  // click backdrop to close
+  modal.addEventListener('click', (e) => {
+    if(e.target === modal || e.target.hasAttribute('data-close')) closeModal();
+  });
+  // escape key
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal();
+  });
+})();
+
+    
+  </script>
+</body>
+</html>
