@@ -30,12 +30,20 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
     }
     a{color:inherit}
     .wrap{max-width:var(--max-width);margin:28px auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:14px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;flex-wrap:nowrap;width:100%}
+    .brand{display:flex;align-items:center;gap:14px;z-index:1000;flex-shrink:1;min-width:0}
     .brand img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid rgba(0,0,0,0.06)}
-    nav{display:flex;gap:18px;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
-    .cta{background:linear-gradient(90deg,var(--accent),#4c6ef5);padding:10px 14px;border-radius:10px;color:white;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(10,102,194,0.12)}
+    nav{display:flex;gap:18px;align-items:center;z-index:500}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px;padding:8px 12px;min-height:44px;display:flex;align-items:center;cursor:pointer}
+    nav a:hover{background:rgba(10,102,194,0.05);border-radius:8px}
+    .cta{background:linear-gradient(90deg,var(--accent),#4c6ef5);padding:10px 14px;border-radius:10px;color:white;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(10,102,194,0.12);display:inline-block;min-height:44px;cursor:pointer}
+    .menu-btn{display:none;background:none;border:none;font-size:28px;cursor:pointer;color:var(--muted);padding:8px;min-height:44px;min-width:44px;z-index:1001;flex-shrink:0;margin-left:auto}
+    .menu-btn::after{content:'☰'}
+    .menu-btn.active::after{content:'✕'}
+    .menu-backdrop{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.3);z-index:997}
+    .menu-backdrop.active{display:block}
+    .nav-close-btn{display:none;background:none;border:none;font-size:28px;cursor:pointer;color:var(--muted);padding:8px;min-height:44px;min-width:44px;align-self:flex-end;margin-bottom:12px}
+    .dropdown{position:relative;display:inline-block;width:100%}
     .hero{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center;margin-top:28px}
     .hero-card{background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:0 6px 24px rgba(0,0,0,0.06)}
     .hero h1{margin:0;font-size:30px;color:#111}
@@ -44,7 +52,7 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
     .btn-outline{padding:10px 14px;border-radius:10px;border:1px solid #e6e6e6;background:transparent;color:#111;text-decoration:none;font-weight:600}
     .icons-row{display:flex;gap:18px;margin-top:16px;flex-wrap:wrap;align-items:center}
     .icons-row i{font-size:26px}
-    .stats{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .stats{display:flex;gap:12px;margin-top:18px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
     .stat{background:#fafafa;padding:12px;border-radius:10px;text-align:center;min-width:110px;box-shadow:0 2px 8px rgba(0,0,0,0.04)}
     .stat h3{margin:0;color:#111}
     .stat p{margin:4px 0 0;color:#666;font-size:13px}
@@ -87,9 +95,113 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
     input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #ececec;background:transparent;color:#222}
     .submit{background:linear-gradient(90deg,var(--accent),#4c6ef5);padding:10px 14px;border-radius:10px;border:none;color:white;font-weight:700;cursor:pointer}
     footer{margin-top:36px;padding:14px;color:#555;text-align:center;font-size:14px}
-    @media (max-width:1100px){ .hero{grid-template-columns:1fr 340px} .case-grid{grid-template-columns:1fr} .carousel-item{flex:0 0 calc((100% - (var(--gap) * 2))/3)} }
-    @media (max-width:780px){ .hero{grid-template-columns:1fr} nav{display:none} .wrap{padding:16px} .carousel-item{flex:0 0 calc((100% - var(--gap))/2)} .skills-grid{grid-template-columns:1fr} .test-grid{grid-template-columns:1fr} }
-    @media (max-width:420px){ .carousel-item{flex:0 0 100%} .carousel-controls{display:none} }
+    @media (max-width:1100px){ 
+      .hero{grid-template-columns:1fr 340px} 
+      .case-grid{grid-template-columns:1fr} 
+      .carousel-item{flex:0 0 calc((100% - (var(--gap) * 2))/3)} 
+    }
+    @media (max-width:900px){
+      nav{position:fixed;top:0;right:-70%;width:70%;height:100vh;flex-direction:column;background:var(--card);border-radius:0;padding:12px 12px 12px;gap:0;box-shadow:-4px 0 12px rgba(0,0,0,0.15);z-index:1002;display:flex;overflow-y:auto;transition:right 0.3s ease}
+      nav.active{right:0}
+      .nav-close-btn{display:flex;align-items:center;justify-content:center}
+      #resumeDropdownMenu{z-index:1003;right:auto;left:0}
+      nav a{width:100%;padding:14px 16px;border-bottom:1px solid #f0f0f0;font-size:15px}
+      nav a:last-child{border-bottom:none}
+      nav a:hover{background:rgba(10,102,194,0.08)}
+      .menu-btn{display:block}
+      .contact-wrap{grid-template-columns:1fr}
+      .contact-form{margin-bottom:12px}
+      .certs-grid{grid-template-columns:1fr}
+      .wrap{padding-top:0}
+      body.menu-open{overflow:hidden}
+    }
+    @media (max-width:780px){ 
+      .hero{grid-template-columns:1fr;margin-top:16px}
+      .hero h1{font-size:24px}
+      header{flex-direction:row;align-items:center;gap:12px}
+      nav{position:fixed;top:0;right:-70%;width:70%;height:100vh;flex-direction:column;background:var(--card);border-radius:0;padding:12px 12px 12px;gap:0;box-shadow:-4px 0 12px rgba(0,0,0,0.15);z-index:1002;display:flex;overflow-y:auto;transition:right 0.3s ease}
+      nav.active{right:0}
+      nav a{width:100%;padding:14px 16px;border-bottom:1px solid #f0f0f0;font-size:15px}
+      nav a:last-child{border-bottom:none}
+      .wrap{padding:16px;margin:16px auto;padding-top:20px}
+      .carousel-item{flex:0 0 calc((100% - var(--gap))/2)} 
+      .skills-grid{grid-template-columns:1fr} 
+      .test-grid{grid-template-columns:1fr}
+      .experience{gap:8px}
+      .exp-card{flex-direction:column}
+      .exp-meta{flex-wrap:wrap}
+      section{margin-top:24px}
+      h2.section-title{font-size:20px}
+      .stat{min-width:auto;flex:1}
+      .actions{flex-direction:column;width:100%}
+      .actions a{width:100%;text-align:center}
+      .cta,.btn-outline{width:100%;display:block}
+      .hero-card{padding:20px}
+      body.menu-open{overflow:hidden}
+    }
+    @media (max-width:600px){
+      .wrap{padding:14px;margin:12px auto;padding-top:20px}
+      .hero h1{font-size:22px;margin-bottom:8px}
+      .hero p.lead{font-size:14px;line-height:1.4}
+      .brand{gap:10px}
+      .brand img{width:48px;height:48px}
+      h2.section-title{font-size:18px}
+      .carousel-item{flex:0 0 calc((100% - var(--gap))/2)}
+      .carousel-controls{padding:0 2px}
+      .carousel-btn{padding:6px 8px;font-size:14px}
+      .skill-card h4{font-size:15px}
+      .stat h3{font-size:20px}
+      .stat p{font-size:12px}
+      .certs-grid{grid-template-columns:1fr}
+      .cert-card{flex-direction:column}
+      .cert-thumb{max-width:100%;flex-basis:auto;padding:10px;border-right:none;border-bottom:1px solid #f0f0f0}
+      .cert-thumb img{width:200px;height:auto}
+      .cert-info{padding:12px}
+      .btn-outline.small{width:100%;display:block}
+      .modal-panel{width:96%}
+      .modal-body{gap:12px;padding:12px}
+      .modal-image{flex:0 0 100%;max-width:100%}
+      .modal-right{flex:1}
+      .icons-row i{font-size:20px}
+    }
+    @media (max-width:480px){
+      .wrap{padding:12px;margin:8px auto}
+      .hero-card{padding:16px}
+      .hero h1{font-size:20px;margin-bottom:8px}
+      .hero p.lead{font-size:13px}
+      .icons-row{gap:10px}
+      .icons-row i{font-size:20px}
+      /* keep stats horizontal on very small screens; allow horizontal scroll instead of stacking */
+      .stats{flex-wrap:nowrap;overflow-x:auto;gap:8px;padding-bottom:6px}
+      .stat{padding:10px;min-width:auto}
+      .carousel-item{flex:0 0 100%;padding:8px}
+      .carousel-controls{display:none}
+      .carousel-btn{padding:4px 6px;font-size:12px}
+      input,textarea{padding:8px;font-size:14px;min-height:44px}
+      .submit{padding:8px 12px;font-size:14px;min-height:44px}
+      .exp-card{padding:12px}
+      .exp-card ul{margin:8px 0 0 20px;padding:0;font-size:13px}
+      .exp-card ul li{margin-bottom:6px}
+      footer{font-size:12px;padding:10px}
+      h2.section-title{font-size:16px;margin-bottom:6px}
+      p.section-sub{font-size:13px;margin-bottom:12px}
+      .skill-card h4{font-size:14px}
+      .pill{font-size:12px;padding:5px 8px}
+      .case{padding:14px}
+      .case div{font-size:16px}
+      .case p{font-size:13px}
+      .cert-card{min-height:auto}
+      .cert-thumb{padding:8px}
+      .cert-title{font-size:16px;margin-bottom:4px}
+      .cert-meta{font-size:12px;margin-bottom:8px}
+      .modal-panel{width:98%;padding:12px}
+      .modal-title{font-size:18px}
+      .modal-desc{font-size:13px}
+    }
+    @media (max-width:420px){ 
+      .carousel-item{flex:0 0 100%}
+      .carousel-controls{display:none}
+    }
 
 
 /* ===== Certificates gallery ===== */
@@ -181,6 +293,7 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
 </head>
 <body>
   <div class="wrap">
+    <div class="menu-backdrop" id="menuBackdrop"></div>
 
     <!-- HEADER -->
     <header>
@@ -192,7 +305,9 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
         </div>
       </div>
 
-      <nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false"></button>
+      <nav id="nav-menu">
+        <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu">✕</button>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
@@ -961,6 +1076,44 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
   });
 })();
 
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const navMenu = document.getElementById('nav-menu');
+    const menuBackdrop = document.getElementById('menuBackdrop');
+    const navCloseBtn = document.getElementById('navCloseBtn');
+    
+    function closeMenu() {
+      navMenu.classList.remove('active');
+      menuBtn.classList.remove('active');
+      if(menuBackdrop) menuBackdrop.classList.remove('active');
+      document.body.classList.remove('menu-open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+    
+    if(menuBtn && navMenu){
+      menuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuBtn.classList.toggle('active');
+        if(menuBackdrop) menuBackdrop.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+        menuBtn.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+      });
+      // Close menu when backdrop clicked
+      if(menuBackdrop) menuBackdrop.addEventListener('click', closeMenu);
+      // Close menu when nav close button clicked
+      if(navCloseBtn) navCloseBtn.addEventListener('click', closeMenu);
+      // Close menu when a link is clicked
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+          // Don't close menu for resume dropdown button or its children
+          if (this.id === 'resumeDropdownBtn' || this.parentElement.id === 'resumeDropdownMenu') {
+            e.stopPropagation();
+            return;
+          }
+          closeMenu();
+        });
+      });
+    }
     
   </script>
 </body>
