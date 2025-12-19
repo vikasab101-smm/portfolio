@@ -174,6 +174,20 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
       /* keep stats horizontal on very small screens; allow horizontal scroll instead of stacking */
       .stats{flex-wrap:nowrap;overflow-x:auto;gap:8px;padding-bottom:6px}
       .stat{padding:10px;min-width:auto}
+      /* Mobile vertical reel layout */
+      #reels .carousel-viewport{display:none}
+      #reels .carousel-controls{display:none}
+      #reels .mobile-reels-container{display:flex;flex-direction:column;gap:16px}
+      #reels .mobile-reel-item{display:flex;flex-direction:column}
+      #reels .mobile-reel-item.hidden{display:none}
+      #reels .load-more-btn{width:100%;padding:12px;background:linear-gradient(90deg,var(--accent),#4c6ef5);color:white;border:none;border-radius:10px;font-weight:700;cursor:pointer;margin-top:12px}
+      /* Mobile vertical videos layout */
+      #videos .carousel-viewport{display:none}
+      #videos .carousel-controls{display:none}
+      #videos .mobile-videos-container{display:flex;flex-direction:column;gap:16px}
+      #videos .mobile-video-item{display:flex;flex-direction:column}
+      #videos .mobile-video-item.hidden{display:none}
+      #videos .load-more-videos-btn{width:100%;padding:12px;background:linear-gradient(90deg,var(--accent),#4c6ef5);color:white;border:none;border-radius:10px;font-weight:700;cursor:pointer;margin-top:12px}
       .carousel-item{flex:0 0 100%;padding:8px}
       .carousel-controls{display:none}
       .carousel-btn{padding:4px 6px;font-size:12px}
@@ -311,7 +325,7 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
-        <a href="#cases">Case Studies</a>
+        <!-- <a href="#cases">Case Studies</a> -->
         <a href="#reels">Reels</a>
         <a href="#videos">Videos</a>
           <div class="dropdown" style="position:relative;display:inline-block;">
@@ -389,7 +403,7 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
         <div style="width:100%;max-width:380px;background:#fff;padding:14px;border-radius:12px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,0.04)">
           <div style="font-weight:700;color:#111">Vikas Biradar</div>
           <div style="color:#555;font-size:13px;margin-top:8px">Social Media Manager & Digital Marketing strategist</div>
-          <div style="margin-top:10px"><a href="https://www.linkedin.com/in/vikasab101/" target="_blank" style="color:var(--muted)">linkedin.com/in/vikasab101</a></div>
+          <div style="margin-top:10px;display:flex;align-items:center;gap:8px;justify-content:center"><i class="fab fa-linkedin" style="color:#0a66c2;font-size:18px"></i><a href="https://www.linkedin.com/in/vikasab101/" target="_blank" style="color:var(--muted)">Visit my LinkedIn profile</a></div>
         </div>
       </div>
     </div>
@@ -414,7 +428,7 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
         <div>
           <div style="font-weight:700;color:#111">Social Media Manager</div>
           <div style="color:var(--muted);font-size:13px">
-            Life Force Homeopathy • Apr 2025 – Present (On-site)
+            • Life Force Homeopathy<br>• Apr 2025 – Present<br>• Chembur, Mumbai (On-site)
           </div>
         </div>
       </div>
@@ -440,7 +454,7 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
         <div>
           <div style="font-weight:700;color:#111">Social Media Executive</div>
           <div style="color:var(--muted);font-size:13px">
-            Life Force Homeopathy • Sep 2023 – Apr 2025 | Mumbai
+           • Life Force Homeopathy<br>• Sep 2023 – Apr 2025<br>• Chembur, Mumbai (On-site)
           </div>
         </div>
       </div>
@@ -458,9 +472,9 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
       <div class="exp-meta">
         <img src="https://i.ibb.co/zHtFDVqp/Mohalla-tech-logo.jpg" alt="Mohalla Tech">
         <div>
-          <div style="font-weight:700;color:#111">Moj Creator (Freelance)</div>
+          <div style="font-weight:700;color:#111">Moj Creator</div>
           <div style="color:var(--muted);font-size:13px">
-            Mohalla Tech • Nov 2021 – Nov 2022 (Remote)
+            • Mohalla Tech<br>• Nov 2021 – Nov 2022 (Remote)
           </div>
         </div>
       </div>
@@ -480,7 +494,7 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
         <div>
           <div style="font-weight:700;color:#111">Tech Content Creator</div>
           <div style="color:var(--muted);font-size:13px">
-            YouTube • Nov 2021 – Nov 2022 (Remote)
+            • YouTube<br>• Nov 2021 – Nov 2022 (Remote)
           </div>
         </div>
       </div>
@@ -543,7 +557,7 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
     </section>
 
     <!-- CASE STUDIES -->
-    <section id="cases">
+    <!-- <section id="cases">
       <h2 class="section-title">Case Studies</h2>
       <p class="section-sub">Selected projects in problem → strategy → execution → results format.</p>
 
@@ -558,13 +572,14 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
           <p style="margin-top:8px;color:#555">Problem: Low in-store visits. Strategy: Geo-targeted ads, UGC-style reels, influencer micro-collabs. Execution: Offer-driven creatives & optimized ad sets. <strong>Results: 3x month-on-month footfall during campaign.</strong></p>
         </article>
       </div>
-    </section>
+    </section> -->
 
     <!-- MY EDITED REELS (9:16 scroller) -->
     <section id="reels">
       <h2 class="section-title">My Edited Reels</h2>
-      <p class="section-sub">Short-form edits optimized for engagement and shareability. Use arrows to scroll; shows 4 items on desktop.</p>
+      <p class="section-sub">Short-form edits optimized for engagement and shareability.</p>
 
+      <!-- Desktop Carousel -->
       <div class="carousel-wrap">
         <div class="carousel">
           <div class="carousel-viewport" id="reelsCarousel" aria-label="Reels carousel">
@@ -607,6 +622,41 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
           <button class="carousel-btn" data-target="reelsCarousel" data-dir="next">▶</button>
         </div>
       </div>
+
+      <!-- Mobile Vertical Layout -->
+      <div class="mobile-reels-container" style="display:none" id="mobileReelsContainer">
+        <div class="mobile-reel-item" data-reel-index="0">
+          <div class="embed-9x16"><iframe src="https://www.youtube.com/embed/hiMq99tobww" title="Short 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Short · Homeopathy</div>
+        </div>
+
+        <div class="mobile-reel-item" data-reel-index="1">
+          <div class="embed-9x16"><iframe src="https://www.youtube.com/embed/KigSxnEwf5c" title="Short 2" allowfullscreen></iframe></div>
+          <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Short · Campaign</div>
+        </div>
+
+        <div class="mobile-reel-item hidden" data-reel-index="2">
+          <div class="embed-9x16"><iframe src="https://www.youtube.com/embed/gUkf5cKutDg" title="Short 3" allowfullscreen></iframe></div>
+          <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Short · Teaser</div>
+        </div>
+
+        <div class="mobile-reel-item hidden" data-reel-index="3">
+          <div class="embed-9x16"><iframe src="https://www.youtube.com/embed/jyM_5OCt-6E" title="Short 4" allowfullscreen></iframe></div>
+          <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Short · Engagement</div>
+        </div>
+
+        <div class="mobile-reel-item hidden" data-reel-index="4">
+          <div class="embed-9x16"><iframe src="https://www.youtube.com/embed/459RI2bh2Lw" title="Short 5" allowfullscreen></iframe></div>
+          <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Short · Awareness</div>
+        </div>
+
+        <div class="mobile-reel-item hidden" data-reel-index="5">
+          <div class="embed-9x16"><iframe src="https://www.youtube.com/embed/WUxcpE9eNjg" title="Short 6" allowfullscreen></iframe></div>
+          <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Short · Offer Teaser</div>
+        </div>
+
+        <button class="load-more-btn" id="loadMoreReelsBtn" style="display:none">Show one more reel</button>
+      </div>
     </section>
 
     <!-- FULL-LENGTH VIDEOS (16:9 scroller) -->
@@ -614,6 +664,7 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
   <h2 class="section-title">Full-Length Videos & Case Studies</h2>
   <p class="section-sub">Long-form narratives and campaign videos used for brand storytelling and conversions.</p>
 
+  <!-- Desktop Carousel -->
   <div class="carousel-wrap">
     <div class="carousel">
       <div class="carousel-viewport" id="videosCarousel" aria-label="Videos carousel">
@@ -698,6 +749,46 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
       <button class="carousel-btn" data-target="videosCarousel" data-dir="next">▶</button>
     </div>
   </div>
+
+  <!-- Mobile Vertical Layout -->
+  <div class="mobile-videos-container" style="display:none" id="mobileVideosContainer">
+    <div class="mobile-video-item" data-video-index="0">
+      <div class="embed-16x9"><iframe src="https://www.youtube.com/embed/AC131D_tbGk" title="Video 1" allowfullscreen></iframe></div>
+      <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Welcome to Life Force Homeopathy! लाइफ फोर्स होमिओपॅथी #homeopathy</div>
+    </div>
+
+    <div class="mobile-video-item" data-video-index="1">
+      <div class="embed-16x9"><iframe src="https://www.youtube.com/embed/fgOpMXhcvxs" title="Video 2" allowfullscreen></iframe></div>
+      <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Migraine Treatment with Homeopathy | Prognosis & Long-Term Results | Dr. Rajesh Shah</div>
+    </div>
+
+    <div class="mobile-video-item hidden" data-video-index="2">
+      <div class="embed-16x9"><iframe src="https://www.youtube.com/embed/icvDbYyIWhc" title="Video 3" allowfullscreen></iframe></div>
+      <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Trigeminal Neuralgia Causes, Symptoms & Best Homeopathy Treatment | Facial Nerve Pain Relief</div>
+    </div>
+
+    <div class="mobile-video-item hidden" data-video-index="3">
+      <div class="embed-16x9"><iframe src="https://www.youtube.com/embed/pxKKlIlM9Rg" title="Video 4" allowfullscreen></iframe></div>
+      <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">How Homeopathy Helps in Eczema (Atopic Dermatitis) | Alternative Skin Treatment</div>
+    </div>
+
+    <div class="mobile-video-item hidden" data-video-index="4">
+      <div class="embed-16x9"><iframe src="https://www.youtube.com/embed/MNn-kGADmt0" title="Video 5" allowfullscreen></iframe></div>
+      <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">Homeopathy for Alopecia Areata | Dr. Rajesh Shah MD | Patchy Hair Loss Treatment Explained</div>
+    </div>
+
+    <div class="mobile-video-item hidden" data-video-index="5">
+      <div class="embed-16x9"><iframe src="https://www.youtube.com/embed/sgbmMvFHK5s" title="Video 6" allowfullscreen></iframe></div>
+      <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">How do you look at the current state of homeopathy? Dr Rajesh Shah | 40 Years insights #40Years Q7</div>
+    </div>
+
+    <div class="mobile-video-item hidden" data-video-index="6">
+      <div class="embed-16x9"><iframe src="https://www.youtube.com/embed/RsRcuL-A_w4" title="Video 7" allowfullscreen></iframe></div>
+      <div style="margin-top:8px;color:var(--muted);font-size:13px;text-align:center">What Is Classical Homeopathy? Dr. Rajesh Shah, MD, Explains | 40 Years of Insight #40Years Q5</div>
+    </div>
+
+    <button class="load-more-videos-btn" id="loadMoreVideosBtn" style="display:none">Show one more video</button>
+  </div>
 </section>
 
 
@@ -751,7 +842,7 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
           <div class="cert-title">Understanding Viral Videos</div>
           <div class="cert-meta">
             <img src="https://i.ibb.co/N5FnXqj/linkedin-logo.jpg" class="issuer-logo" alt="LinkedIn logo">
-            <span class="issuer">LinkedIn</span> · <span class="issued">Issued Jul 2025</span>
+            <span class="issuer">LinkedIn</span> · <span class="issued">Jul 2025</span>
           </div>
           <div class="cert-tags">
             <span class="tag">Viral Video</span>
@@ -898,15 +989,17 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
       <div class="contact-wrap">
         <div class="contact-form">
           <form onsubmit="handleSubmit(event)">
-            <div style="margin-bottom:10px"><input id="name" type="text" placeholder="Your name" required /></div>
+            <div style="margin-bottom:10px"><input id="firstName" type="text" placeholder="First Name" required /></div>
+            <div style="margin-bottom:10px"><input id="mobile" type="tel" placeholder="Mobile Number" required /></div>
             <div style="margin-bottom:10px"><input id="email" type="email" placeholder="Email" required /></div>
-            <div style="margin-bottom:10px"><textarea id="message" rows="5" placeholder="Message e.g. role you are hiring for" required></textarea></div>
-            <div style="text-align:right"><button class="submit" type="submit">Send Message</button></div>
+            <div style="margin-bottom:10px"><input id="company" type="text" placeholder="Company Name" required /></div>
+            <div style="text-align:center"><button class="submit" type="submit">Send Details</button></div>
           </form>
         </div>
 
         <aside style="background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)">
           <div style="font-weight:700;color:#111">Contact Details</div>
+          <div style="color:var(--muted);margin-top:8px">Name: <a href="75074 35549">Vikas Biradar</a></div>
           <div style="color:var(--muted);margin-top:8px">Mobile: <a href="75074 35549">+91 75074 35549</a></div>
           <div style="color:var(--muted);margin-top:8px">Email: <a href="mailto:vikas@example.com">vikasab101@outlook.com</a></div>
           <div style="color:var(--muted);margin-top:6px">LinkedIn: <a href="https://www.linkedin.com/in/vikasab101/" target="_blank">linkedin.com/in/vikasab101</a></div>
@@ -931,12 +1024,18 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
   <script>
     function handleSubmit(e){
       e.preventDefault();
-      const name = document.getElementById('name').value;
+      const firstName = document.getElementById('firstName').value;
+      const mobile = document.getElementById('mobile').value;
       const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-      const subject = encodeURIComponent('Opportunity Inquiry from ' + name);
-      const body = encodeURIComponent(message + '\\n\\nContact: ' + email);
-      window.location.href = 'mailto:vikas@example.com?subject='+subject+'&body='+body;
+      const company = document.getElementById('company').value;
+      const subject = encodeURIComponent('New Contact Inquiry from ' + firstName);
+      const body = encodeURIComponent('First Name: ' + firstName + '\n\nMobile Number: ' + mobile + '\n\nEmail: ' + email + '\n\nCompany Name: ' + company);
+      window.location.href = 'mailto:vikasab101@outlook.com?subject='+subject+'&body='+body;
+      
+      // Reset form after submission
+      setTimeout(()=>{
+        document.querySelector('.contact-form form').reset();
+      }, 100);
     }
 
     function initCarousel(viewportId){
@@ -968,7 +1067,137 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
     document.addEventListener('DOMContentLoaded', ()=>{
       initCarousel('reelsCarousel');
       initCarousel('videosCarousel');
+
+      // Mobile reels vertical layout initialization
+      initMobileReels();
+      // Mobile videos vertical layout initialization
+      initMobileVideos();
     });
+
+    function initMobileReels(){
+      const isMobile = window.innerWidth <= 480;
+      const mobileContainer = document.getElementById('mobileReelsContainer');
+      const desktopCarousel = document.querySelector('.carousel-wrap');
+      const loadMoreBtn = document.getElementById('loadMoreReelsBtn');
+      let currentVisibleCount = 2;
+      const totalReels = 6;
+
+      function updateDisplay(){
+        const isMobileNow = window.innerWidth <= 480;
+        if(isMobileNow){
+          mobileContainer.style.display = 'flex';
+          desktopCarousel.style.display = 'none';
+          updateMobileReels();
+        } else {
+          mobileContainer.style.display = 'none';
+          desktopCarousel.style.display = 'block';
+        }
+      }
+
+      function updateMobileReels(){
+        const items = mobileContainer.querySelectorAll('.mobile-reel-item');
+        items.forEach((item, index) => {
+          if(index < currentVisibleCount){
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+
+        if(currentVisibleCount < totalReels){
+          loadMoreBtn.style.display = 'block';
+        } else {
+          loadMoreBtn.style.display = 'none';
+        }
+      }
+
+      if(loadMoreBtn){
+        loadMoreBtn.addEventListener('click', ()=>{
+          loadMoreBtn.disabled = true;
+          loadMoreBtn.textContent = 'Loading...';
+          
+          // Simulate loading with a small delay
+          setTimeout(()=>{
+            currentVisibleCount = Math.min(currentVisibleCount + 1, totalReels);
+            updateMobileReels();
+            loadMoreBtn.disabled = false;
+            loadMoreBtn.textContent = currentVisibleCount < totalReels ? 'Show one more reel' : 'All reels loaded';
+            
+            // Scroll to the newly loaded reel
+            const items = mobileContainer.querySelectorAll('.mobile-reel-item:not(.hidden)');
+            if(items.length > 0){
+              items[items.length - 1].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+          }, 500);
+        });
+      }
+
+      // Check on resize
+      window.addEventListener('resize', updateDisplay);
+      updateDisplay();
+    }
+
+    function initMobileVideos(){
+      const mobileContainer = document.getElementById('mobileVideosContainer');
+      const desktopCarousel = document.querySelector('#videos .carousel-wrap');
+      const loadMoreBtn = document.getElementById('loadMoreVideosBtn');
+      let currentVisibleCount = 2;
+      const totalVideos = 7;
+
+      function updateDisplay(){
+        const isMobileNow = window.innerWidth <= 480;
+        if(isMobileNow){
+          mobileContainer.style.display = 'flex';
+          desktopCarousel.style.display = 'none';
+          updateMobileVideos();
+        } else {
+          mobileContainer.style.display = 'none';
+          desktopCarousel.style.display = 'block';
+        }
+      }
+
+      function updateMobileVideos(){
+        const items = mobileContainer.querySelectorAll('.mobile-video-item');
+        items.forEach((item, index) => {
+          if(index < currentVisibleCount){
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+
+        if(currentVisibleCount < totalVideos){
+          loadMoreBtn.style.display = 'block';
+        } else {
+          loadMoreBtn.style.display = 'none';
+        }
+      }
+
+      if(loadMoreBtn){
+        loadMoreBtn.addEventListener('click', ()=>{
+          loadMoreBtn.disabled = true;
+          loadMoreBtn.textContent = 'Loading...';
+          
+          // Simulate loading with a small delay
+          setTimeout(()=>{
+            currentVisibleCount = Math.min(currentVisibleCount + 1, totalVideos);
+            updateMobileVideos();
+            loadMoreBtn.disabled = false;
+            loadMoreBtn.textContent = currentVisibleCount < totalVideos ? 'Show one more video' : 'All videos loaded';
+            
+            // Scroll to the newly loaded video
+            const items = mobileContainer.querySelectorAll('.mobile-video-item:not(.hidden)');
+            if(items.length > 0){
+              items[items.length - 1].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+          }, 500);
+        });
+      }
+
+      // Check on resize
+      window.addEventListener('resize', updateDisplay);
+      updateDisplay();
+    }
 
 // Certificates modal interactivity (cards + view button)
 (function(){
