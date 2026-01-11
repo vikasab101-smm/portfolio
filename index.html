@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -301,6 +302,76 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
   .modal-image { max-width:100%; }
   .modal-image img { max-height:420px; object-fit:contain; }
 }
+
+/* ===== Awards & Recognition ===== */
+.section-awards {
+  margin-top: 32px;
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.award-card {
+  background: var(--card);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.award-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.award-image {
+  aspect-ratio: 1 / 1;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.award-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.award-info {
+  padding: 14px 16px;
+}
+
+.award-title {
+  font-weight: 700;
+  font-size: 16px;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.award-meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.award-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
   </style>
@@ -993,6 +1064,44 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
   </div>
 </section>
 
+<!-- AWARDS & RECOGNITION -->
+<section id="awards" class="section-awards">
+  <h2 class="section-title">Awards & Recognition</h2>
+  <p class="section-sub">
+    Industry recognition and moments of achievement highlighting my professional journey.
+  </p>
+
+  <div class="awards-grid">
+
+    <!-- Award Card 1 -->
+    <article class="award-card">
+      <div class="award-image">
+        <img src="https://i.ibb.co/rf4B40Zr/Vikas-Biradar-Proactive-initiative-and-MDs-Choice-award-2025-Life-Force-Homeopathy.png" alt="Vikas Biradar Proactive initiative and MDs Choice award 2025 Life Force Homeopathy" border="0">
+      </div>
+      <div class="award-info">
+        <div class="award-title">Proactive, Initiative and MD,s Choice Awrad 2025</div>
+        <div class="award-meta">Life Force Homeopathy · 2025</div>
+        <p class="award-desc">  
+Honored to receive the Proactive, Initiative and MD’s Choice Award 2025. This recognition reflects my proactive approach, ownership of responsibilities, and initiatives taken throughout 2025 to strengthen the digital presence and business growth of Life Force Homeopathy. Grateful to Dr. Rajesh Shah and the leadership team for the trust and support.        </p>
+      </div>
+    </article>
+
+    <!-- Award Card 2 -->
+    <article class="award-card">
+      <div class="award-image">
+       <img src="https://i.ibb.co/gF7YhXc8/SMM-Vikas-Biradar-ACE-Allience-Award-2024-Life-Force-Homeopathy.png" alt="SMM Vikas Biradar ACE Allience Award 2024 Life Force Homeopathy" border="0">
+      </div>
+      <div class="award-info">
+        <div class="award-title">Ace Alliance Award 2024</div>
+        <div class="award-meta">Life Force Homeopathy · 2024</div>
+        <p class="award-desc">
+Awarded the Ace Alliance Award 2024 (Accepting the Challenge of Excellence) by Life Force Homeopathy in recognition of consistent performance, adaptability, and commitment to excellence. Honored to receive this appreciation from the leadership under Dr Rajesh Shah, reinforcing the value of collaboration, ownership, and results driven work.        </p>
+      </div>
+    </article>
+
+  </div>
+</section>  
+
     <!-- CONTACT -->
     <section id="contact">
       <h2 class="section-title">Contact</h2>
@@ -1026,6 +1135,7 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
         </aside>
       </div>
     </section>
+
 
     <!-- FOOTER -->
     <footer>
