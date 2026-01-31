@@ -374,6 +374,78 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
 
 
 
+.tools-section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.tools-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-wrapper:hover .scroll-track {
+  animation-play-state: paused;
+}
+@media (max-width: 768px) {
+  .scroll-track img {
+    width: 48px;
+  }
+}
+.scroll-wrapper {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+.scroll-track img {
+  width: 60px;
+  height: auto;
+  opacity: 0.9;
+  transform: scale(1);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.scroll-track img:hover {
+  transform: scale(1.1); /* 10% pop */
+  opacity: 1;
+}
+.scroll-track img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.15));
+}
+.scroll-track {
+  will-change: transform;
+}
+
+
+
+
   </style>
 </head>
 <body>
@@ -656,6 +728,48 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
         </article>
       </div>
     </section> -->
+
+
+    <section class="tools-section">
+  <h2>Softwares I’ve hands on Experience</h2>
+
+  <div class="scroll-wrapper">
+    <div class="scroll-track">
+<img src="assets/images/Canva.jpg" alt="Canva">
+<img src="assets/images/ChatGPT.jpg" alt="ChatGPT">
+<img src="assets/images/ElevenLabs.jpg" alt="ElevenLabs">
+<img src="assets/images/Filmora.jpg" alt="Filmora">
+<img src="assets/images/HeyGen.jpg" alt="HeyGen">
+<img src="assets/images/Premiere Pro.jpg" alt="Premiere Pro">
+<img src="assets/images/Shopify.jpg" alt="Shopify">
+<img src="assets/images/Visual Studio Code.jpg" alt="VS Code">
+<img src="assets/images/Wordpress.jpg" alt="WordPress">
+
+
+      <!-- duplicate for seamless loop -->
+      <img src="assets/images/Canva.jpg" alt="Canva">
+<img src="assets/images/ChatGPT.jpg" alt="ChatGPT">
+<img src="assets/images/ElevenLabs.jpg" alt="ElevenLabs">
+<img src="assets/images/Filmora.jpg" alt="Filmora">
+<img src="assets/images/HeyGen.jpg" alt="HeyGen">
+<img src="assets/images/Premiere Pro.jpg" alt="Premiere Pro">
+<img src="assets/images/Shopify.jpg" alt="Shopify">
+<img src="assets/images/Visual Studio Code.jpg" alt="VS Code">
+<img src="assets/images/Wordpress.jpg" alt="WordPress">
+
+      <img src="assets/images/Canva.jpg" alt="Canva">
+<img src="assets/images/ChatGPT.jpg" alt="ChatGPT">
+<img src="assets/images/ElevenLabs.jpg" alt="ElevenLabs">
+<img src="assets/images/Filmora.jpg" alt="Filmora">
+<img src="assets/images/HeyGen.jpg" alt="HeyGen">
+<img src="assets/images/Premiere Pro.jpg" alt="Premiere Pro">
+<img src="assets/images/Shopify.jpg" alt="Shopify">
+<img src="assets/images/Visual Studio Code.jpg" alt="VS Code">
+<img src="assets/images/Wordpress.jpg" alt="WordPress">
+    </div>
+  </div>
+</section>
+
 
     <!-- MY EDITED REELS (9:16 scroller) -->
     <section id="reels">
@@ -1076,7 +1190,7 @@ Performance-driven Social Media Manager combining creative storytelling with ad-
     <!-- Award Card 1 -->
     <article class="award-card">
       <div class="award-image">
-       <img src="https://i.ibb.co/gF7YhXc8/SMM-Vikas-Biradar-ACE-Allience-Award-2024-Life-Force-Homeopathy.png" alt="SMM Vikas Biradar ACE Allience Award 2024 Life Force Homeopathy" border="0">
+        <img src="https://i.ibb.co/rf4B40Zr/Vikas-Biradar-Proactive-initiative-and-MDs-Choice-award-2025-Life-Force-Homeopathy.png" alt="Vikas Biradar Proactive initiative and MDs Choice award 2025 Life Force Homeopathy" border="0">
       </div>
       <div class="award-info">
         <div class="award-title">Proactive, Initiative and MD,s Choice Awrad 2025</div>
@@ -1089,7 +1203,7 @@ Honored to receive the Proactive, Initiative and MD’s Choice Award 2025. This 
     <!-- Award Card 2 -->
     <article class="award-card">
       <div class="award-image">
-        <img src="https://i.ibb.co/rf4B40Zr/Vikas-Biradar-Proactive-initiative-and-MDs-Choice-award-2025-Life-Force-Homeopathy.png" alt="Vikas Biradar Proactive initiative and MDs Choice award 2025 Life Force Homeopathy" border="0">
+       <img src="https://i.ibb.co/gF7YhXc8/SMM-Vikas-Biradar-ACE-Allience-Award-2024-Life-Force-Homeopathy.png" alt="SMM Vikas Biradar ACE Allience Award 2024 Life Force Homeopathy" border="0">
       </div>
       <div class="award-info">
         <div class="award-title">Ace Alliance Award 2024</div>
@@ -1469,4 +1583,3 @@ Awarded the Ace Alliance Award 2024 (Accepting the Challenge of Excellence) by L
   </script>
 </body>
 </html>
-
